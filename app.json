@@ -1,38 +1,32 @@
 {
-  "expo": {
-    "name": "haptic-stim-android",
-    "slug": "haptic-stim-android",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "permissions": [
-        "INTERNET"
-      ],
-      "package": "dev.ackle.haptic_stim"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "9bc2dd7e-22d3-4297-ae8c-078f87e1a312"
-      }
-    }
-  }
+	"expo": {
+		"name": "Haptic Stimulator",
+		"slug": "haptic-stim-android",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "automatic",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"edgeToEdgeEnabled": true,
+			"package": "dev.ackle.haptic_stim",
+			"permissions": [
+				"VIBRATE"
+			]
+		},
+		"extra": {
+			"eas": {
+				"projectId": "9bc2dd7e-22d3-4297-ae8c-078f87e1a312"
+			}
+		}
+	}
 }
