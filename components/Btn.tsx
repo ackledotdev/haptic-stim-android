@@ -1,13 +1,5 @@
 import { Pressable, Text, useColorScheme } from 'react-native';
 import * as Haptics from 'expo-haptics';
-// import { HapticOptions } from 'react-native-haptic-feedback';
-
-/**
-	const HapticOpts: HapticOptions = {
-		// The whole point is to vibrate
-		ignoreAndroidSystemSettings: true
-	};
-*/
 
 export default function Btn({
 	name,
@@ -42,8 +34,8 @@ export default function Btn({
 						? 'rgba(255, 255, 255, 0.3)'
 						: 'rgba(0, 0, 0, 0.3)'
 					: isDark
-						? 'rgba(255, 255, 255, 0.2)'
-						: 'rgba(0, 0, 0, 0.1)',
+					? 'rgba(255, 255, 255, 0.2)'
+					: 'rgba(0, 0, 0, 0.1)',
 				padding: 15,
 				borderRadius: 10,
 				margin: 10
