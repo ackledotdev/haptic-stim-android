@@ -19,9 +19,7 @@
 			},
 			"edgeToEdgeEnabled": true,
 			"package": "dev.ackle.haptic_stim",
-			"permissions": [
-				"VIBRATE"
-			]
+			"permissions": ["VIBRATE"]
 		},
 		"extra": {
 			"eas": {
