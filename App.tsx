@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import {
-	Pressable,
 	StyleSheet,
 	Switch,
 	Text,
@@ -32,7 +31,8 @@ export default function App() {
 			alignItems: 'center',
 			justifyContent: 'center',
 			width: '100%',
-			paddingHorizontal: 10
+			paddingHorizontal: 10,
+			flexWrap: 'wrap'
 		},
 		textRow: {
 			flexDirection: 'row',
@@ -71,12 +71,31 @@ export default function App() {
 
 	const [singleDispatch, setSingleDispatch] = useState(false);
 
-	const Buttons: [string, Haptics.AndroidHaptics][] = [
-		['Segment Tick', Haptics.AndroidHaptics.Segment_Tick],
-		['Clock Tick', Haptics.AndroidHaptics.Clock_Tick],
-		['Context Click', Haptics.AndroidHaptics.Context_Click]
-	];
-
+	const Buttons: [string, Haptics.AndroidHaptics][] = /**
+		[
+			['Clock Tick', Haptics.AndroidHaptics.Clock_Tick],
+			['Confirm', Haptics.AndroidHaptics.Confirm],
+			['Context Click', Haptics.AndroidHaptics.Context_Click],
+			['Drag Start', Haptics.AndroidHaptics.Drag_Start],
+			['Gesture End', Haptics.AndroidHaptics.Gesture_End],
+			['Gesture Start', Haptics.AndroidHaptics.Gesture_Start],
+			['Keyboard Press', Haptics.AndroidHaptics.Keyboard_Press],
+			['Keyboard Release', Haptics.AndroidHaptics.Keyboard_Release],
+			['Keyboard Tap', Haptics.AndroidHaptics.Keyboard_Tap],
+			['Long Press', Haptics.AndroidHaptics.Long_Press],
+			['Reject', Haptics.AndroidHaptics.Reject],
+			['Segment Frequent Tick', Haptics.AndroidHaptics.Segment_Frequent_Tick],
+			['Segment Tick', Haptics.AndroidHaptics.Segment_Tick],
+			['Text Handle Move', Haptics.AndroidHaptics.Text_Handle_Move],
+			['Virtual Key', Haptics.AndroidHaptics.Virtual_Key],
+			['Virtual Key Release', Haptics.AndroidHaptics.Virtual_Key_Release]
+		];
+	*/ Object.entries(Haptics.AndroidHaptics)
+		.filter(([k, v]) => v != Haptics.AndroidHaptics.No_Haptics)
+		.map(([k, v]) => [k.replace(/_/g, ' '), v]) as [
+		string,
+		Haptics.AndroidHaptics
+	][];
 	return (
 		<SafeAreaView style={styles.root}>
 			<View style={styles.buttonContainer}>
