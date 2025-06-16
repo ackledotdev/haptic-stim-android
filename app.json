@@ -10,7 +10,7 @@
 		"splash": {
 			"image": "./assets/splash-icon.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
+			"backgroundColor": "#000000"
 		},
 		"android": {
 			"adaptiveIcon": {
@@ -19,7 +19,9 @@
 			},
 			"edgeToEdgeEnabled": true,
 			"package": "dev.ackle.haptic_stimulator",
-			"permissions": ["VIBRATE"]
+			"permissions": [
+				"VIBRATE"
+			]
 		},
 		"extra": {
 			"eas": {
