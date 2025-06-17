@@ -7,11 +7,6 @@
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "automatic",
 		"newArchEnabled": true,
-		"splash": {
-			"image": "./assets/splash-icon.png",
-			"resizeMode": "contain",
-			"backgroundColor": "#000000"
-		},
 		"android": {
 			"edgeToEdgeEnabled": true,
 			"package": "dev.ackle.haptic_stimulator",
