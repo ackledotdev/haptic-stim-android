@@ -28,6 +28,5 @@
 	},
 	"private": true,
 	"type": "module",
-	"license": "MIT",
-	"packageManager": "yarn@4.9.2"
+	"license": "MIT"
 }
